@@ -107,7 +107,7 @@ namespace WNSPushNotification
       byte[] postData = Encoding.UTF8.GetBytes(content);
 
       var request = WebRequest.Create(channel);
-      request.ContentType = type == "wns/raw" ? "text/plain" : "text/xml";
+      request.ContentType = type == "wns/raw" ? "application/octet-stream" : "text/xml";
       request.Method = "POST";
       request.ContentLength = postData.Length;
 
