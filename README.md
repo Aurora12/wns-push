@@ -4,7 +4,7 @@ Console utility for sending push notifications through Windows Push Notification
 
 ## Usage
 
-    WNSPushNotification.exe -type type -channel -content file_path -sid package_sid -secret client_secret
+    WNSPushNotification.exe -type type -channel channel_uri -content file_path -sid package_sid -secret client_secret
 
 OR
 
