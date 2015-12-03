@@ -104,7 +104,7 @@ namespace WNSPushNotification
 
     async Task<string> SendNotification(string type, string channel, string token, string content)
     {
-      byte[] postData = Encoding.Default.GetBytes(content);
+      byte[] postData = Encoding.UTF8.GetBytes(content);
 
       var request = WebRequest.Create(channel);
       request.ContentType = type == "wns/raw" ? "text/plain" : "text/xml";
